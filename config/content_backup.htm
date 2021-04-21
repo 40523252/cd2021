@@ -31,38 +31,38 @@
 <h1>SSH流程</h1>
 <p>使用SSH是為了簡化把更新的檔案推送到倉儲的流程</p>
 <p></p>
-<p>1.</p>
+<p>1.先在cmd裡輸入sh</p>
+<p><img alt="" height="313" src="/images/SHH 1.png" width="600"/></p>
 <p></p>
+<p>2.再按Enter 直到出現以下視窗 <span style="color: #993300;">底下的路徑是SSH檔案所在位置</span></p>
+<p><img alt="" height="313" src="/images/SSh 2.png" width="600"/></p>
 <p></p>
+<p>3.找到SSH檔案把id_rsa.pub 放入Scite裡</p>
+<p><img alt="" height="336" src="/images/SSH4.png" width="600"/></p>
 <p></p>
-<p>2.</p>
+<p>4.再進入github網頁 找到Setting 的 <span style="color: #993300;">SSH and GPG keys<span style="color: #000000;"> 按下</span>New SSH key</span></p>
+<p><img alt="" height="322" src="/images/SSH5.png" width="600"/></p>
 <p></p>
+<p>5.在Title 打上學號 底下文字就複製剛剛放到Scite 裡的一串代碼</p>
+<p><img alt="" height="322" src="/images/SSH6.png" width="600"/></p>
 <p></p>
+<p>6.到putty 在 Host Name 和 Save Sessions 輸入 <span style="color: #993300;">github.com </span><img alt="" height="542" src="/images/SSH7.png" width="601"/></p>
 <p></p>
+<p>7.路徑選擇ppk鑰匙檔案</p>
+<p><img alt="" height="542" src="/images/SSH8.png" width="601"/></p>
 <p></p>
-<p>3.</p>
+<p>8.把Start.bat 放入Scite 並進行跟改 </p>
+<p>   寫入</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">set GIT_HOME=%Disk%:\portablegit\bin\
+set GIT_SSH=%Disk%:\putty\plink.exe</pre>
+<p><img alt="" height="783" src="/images/SSH9.png" width="600"/></p>
 <p></p>
+<p>9.再到倉儲資料夾裡的<span style="color: #993300;">.git (隱藏資料夾) <span style="color: #000000;">選擇Config 放入Scite 進行編輯</span></span></p>
 <p></p>
-<p>4.</p>
+<p><img alt="" height="450" src="/images/SSH10.png" width="600"/></p>
 <p></p>
+<p>10.輸入 url=git@github.com:學號/倉儲名稱.git</p>
+<p>     並且把上面一行註解掉</p>
+<p><img alt="" height="643" src="/images/SSH11.png" width="600"/></p>
 <p></p>
-<p>5.</p>
-<p></p>
-<p></p>
-<p>6.</p>
-<p></p>
-<p></p>
-<p></p>
-<p>7.</p>
-<p></p>
-<p></p>
-<p>8.</p>
-<p></p>
-<p></p>
-<p>9.</p>
-<p></p>
-<p></p>
-<p>10.</p>
-<p></p>
-<p></p>
-<p>11.</p>
+<p>11.SSH即可完成</p>
