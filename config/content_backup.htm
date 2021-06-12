@@ -121,34 +121,47 @@ set GIT_SSH=%Disk%:\putty\plink.exe</pre>
 <h1>TASK</h1>
 <p></p>
 <h2>task1</h2>
-<p></p>
-<h2>task2</h2>
+<pre class="brush:py;auto-links:false;toolbar:false;highlight:12;tab-size:6" contenteditable="false">with open("stage3_2a.txt") as a:   #開啟Stage3_2a.txt檔案 令他為a
+    data = a.readlines()  #data=讀a檔案裡的資料
+    print(data) #列出data讀到的文字
+for i in range(len(data)):  # 將範圍(range)訂在data讀到的len(有6個)裡就不會出現list index out of range的問題 得到的元素放入i 再讓i做迴圈
+    group = data[i].rstrip("\n").split("\t") #讀取data的第"i"個 把\n刪除讓他不會自動換行 在加上\t 新增空格
+    print('&lt;p&gt;'+group[0]+'|&lt;a href="https://'+group[1]+'.github.io/stage3-ag'+group[0][9]+'"&gt;網站&lt;/a&gt;|&lt;a href="https://github.com/'+group[2]+'/stage3-ag'+group[0][9]+'"&gt;倉儲&lt;/a&gt;&lt;/p&gt;')
+    #列出list 中的內容再加入html的格式 和個人網址
+ 
+ 
+    for j in range(2,18,2): #對j做迴圈把範圍定在2~18 每次跳兩個
+        try:
+            print('&lt;p&gt;'+group[j]+'|Website:'+'&lt;a href="https://'+group[j]+'.github.io/cd2021'+'"&gt;'+group[j]+'&lt;/a&gt;'+'|Repository:'+'&lt;a href="https://github.com/'+group[j]+'/cd2021'+'"&gt;'+group[j]+'&lt;/a&gt;&lt;/p&gt;')   #跟上面一樣列出倉儲網址
+        except:
+            continue  #繼續讓迴圈跑</pre>
+<p><br/><br/></p><h2>task2</h2>
 <p></p>
 <h2>task3</h2>
 <h1>W13-W14</h1>
 <h4>RoboDK 機械手臂</h4>
+<p>1.開啟老師提供的pick_and_place檔案和 robodk程式</p>
 <p><img alt="" height="59" src="/images/r1.png" width="700"/></p>
 <p></p>
-<p></p>
+<p>2.進入到程式後打開資料</p>
 <p><img alt="" height="363" src="/images/r2.png" width="700"/></p>
 <p></p>
 <p><img alt="" height="579" src="/images/r3.png" width="700"/></p>
-<p></p>
+<p>3.找到pick_and_place資料夾的範例</p>
 <p><img alt="" height="431" src="/images/r4.png" width="700"/></p>
-<p></p>
+<p>4.導入</p>
 <p><img alt="" height="366" src="/images/r5.png" width="700"/></p>
-<p></p>
-<p><img alt="" height="366" src="/images/r5.png" width="700"/></p>
-<p></p>
+<p>5.找到程式檔案</p>
 <p><img alt="" height="516" src="/images/r6.png" width="700"/></p>
-<p></p>
+<p>6.放到小白框裡</p>
 <p><img alt="" height="803" src="/images/r7.png" width="700"/></p>
-<p></p>
+<p>7.然後在這裡輸入</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">pip install robodk</pre>
 <p><img alt="" height="219" src="/images/r8.png" width="700"/></p>
-<p></p>
+<p>8.然後再把robodk_ip 改成127.0.0.1</p>
 <p><img alt="" height="803" src="/images/r9.png" width="700"/></p>
 <p></p>
-<p><img alt="" height="533" src="/images/r10.png" width="700"/></p>
+<p>9.完成<img alt="" height="533" src="/images/r10.png" width="700"/></p>
 <p></p><h1>W15</h1>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/IKOGwoJ2HLk" title="YouTube video player" width="560"></iframe></p>
 <p></p>
