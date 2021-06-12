@@ -223,6 +223,89 @@ for i in range(len(data)):  # 將範圍(range)訂在data讀到的len(有6個)裡
 <p style="text-align: center;"><strong>Inverse kinematics  翻譯</strong></p>
 <p style="text-align: center;"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">Inverse kinematics for a 2-joint robot arm using geometry</yt-formatted-string></p>
 <p style="text-align: center;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/IKOGwoJ2HLk" title="YouTube video player" width="560"></iframe></p>
+<p>We saw this simple two-link robot in the previous<br/>lecture about forward kinematics.</p>
+<p>The tooltip pose of this robot is described<br/>simply by two numbers, the coordinates x and</p>
+<p>y with respect to the world coordinate frame.</p>
+<p>So, the problem here is that given x and y,<br/>we want to determine the joined angles, Q1</p>
+<p>and Q2.</p>
+<p>The solution that we’re going to follow<br/>in this particular section is a geometric</p>
+<p>one.</p>
+<p>We’re going to start with a simple piece<br/>of construction.</p>
+<p>We’re going to overlay the red triangle<br/>on top of our robot.</p>
+<p>We know that the end point coordinate is x,<br/>y, so the vertical height of the triangle</p>
+<p>is y, the horizontal width is x.</p>
+<p>And, using Pythagoras theorem, we can write<br/>r squared equals x squared plus y squared.</p>
+<p>So far, so easy.</p>
+<p>Now, we’re going to look at this triangle<br/>highlighted here in red and we want to determine</p>
+<p>the angle alpha.</p>
+<p>In order to do that, we need to use the cosine<br/>rule.</p>
+<p>And, if you’re a little rusty on the cosine<br/>rule, here is a bit of a refresher.</p>
+<p>We have an arbitrary triangle.</p>
+<p>We don’t have to have any right angles in<br/>it and we’re going to label the length of</p>
+<p>this edge as A and the angle opposite that<br/>edge, we’re going to label as little a.</p>
+<p>And, we do the same for this edge and this<br/>angle, and this edge and this angle.</p>
+<p>So, all together, the sides are labelled capitals<br/>A, B and C, and the angles are labelled little</p>
+<p>a, little b, and little c.</p>
+<p>So, the cosine rule is simply this relationship<br/>here.</p>
+<p>It’s a bit like Pythagoras’ theorem except<br/>for this extra term on the end with the cos</p>
+<p>a in it.</p>
+<p>Now, let’s apply the cosine rule to the<br/>particular triangle we looked at a moment</p>
+<p>ago.</p>
+<p>It’s pretty straightforward to write down<br/>this particular relationship.</p>
+<p>We can isolate the term cos alpha which gives<br/>us the angle alpha that we’re interested</p>
+<p>in.</p>
+<p>And, it’s defined in terms of the constant<br/>link lengths, A1 and A2 and the position of</p>
+<p>the end effector, x and y.</p>
+<p>We can write this simple relationship between<br/>the angles alpha and Q2.</p>
+<p>And, we know from the shape of the cosine<br/>function that cos of Q2 must be equal to negative</p>
+<p>of cos alpha.</p>
+<p>This time, let’s just write an expression<br/>for the cosine of the joined angle Q2.</p>
+<p>Now, we’re going to draw yet another red<br/>triangle and we’re going apply some simple</p>
+<p>trigonometry here.</p>
+<p>If we know Q2, then we know this length and<br/>this length of the red triangle.</p>
+<p>We can write this relationship for the sine<br/>of the joined angle Q2.</p>
+<p>Now, we can consider this bigger triangle<br/>whose angle is beta and this side length of</p>
+<p>the triangle is given here in blue.</p>
+<p>And, the length of the other side of the triangle<br/>is this.</p>
+<p>So, now we can write an expression for the<br/>angle beta in terms of these parameters here.</p>
+<p>Going back to the red triangle that we drew<br/>earlier, we can establish a relationship between</p>
+<p>Q1 and the angle beta.</p>
+<p>Introduce yet another angle, this one gamma<br/>and we can write a relationship between the</p>
+<p>angle gamma and the tooltip coordinates x<br/>and y.</p>
+<p>Now, we can write a simple relationship between<br/>the angles that we’ve constructed, gamma</p>
+<p>and beta and the joined angle we’re interested<br/>in which is Q1.</p>
+<p>And, the total relationship looks something<br/>like this.</p>
+<p>Quite a complex relationship, it gives us<br/>the angle of joined one, that’s Q1 in terms</p>
+<p>of the end effector coordinates y and x, and<br/>a bunch of constants, a1 and a2, and it’s</p>
+<p>also a function of the second joint angle,<br/>Q2.</p>
+<p>So, let’s summarize what it is that we have<br/>derived here.</p>
+<p>We have an expression for the cosine of Q2<br/>and we have an expression for Q1.</p>
+<p>Now, the cosine function is symmetrical about<br/>0.</p>
+<p>So, if we know the value of the cosine of<br/>Q2, then there are two possible solutions,</p>
+<p>a positive angle and a negative angle.</p>
+<p>We’re going to explicitly choose the positive<br/>angle, which means that I can write this expression</p>
+<p>here.</p>
+<p>And now, we have what we call the inverse<br/>kinematic solution for this two-link robot.</p>
+<p>We have an expression for the two joined angles,<br/>Q1 and Q2 in terms of the end effector pose</p>
+<p>x and y, and a bunch of constants.</p>
+<p>You notice that the two equations are not<br/>independent.</p>
+<p>The equation for Q1, in fact, depends on the<br/>solution for Q2.</p>
+<p>In this case, Q2 is negative and we’re going<br/>to write the solution for Q2 with a negative</p>
+<p>sign in front of the inverse cosine.</p>
+<p>Now, we need to solve for Q1, so we’re going<br/>to introduce this particular red triangle,</p>
+<p>the angle beta that we solved previously,<br/>and the angle gamma which is defined in terms</p>
+<p>of y and x.</p>
+<p>Now, we write a slightly different relationship<br/>between Q1, gamma and beta, different to what</p>
+<p>we had before.</p>
+<p>There’s a change of sign involved.</p>
+<p>Then, we can substitute all that previous<br/>equation and come up with this expression</p>
+<p>for Q1.</p>
+<p>Again, there is a change of sign here.</p>
+<p>Previously, this was a negative sign.</p>
+<p>And, here in summary form is the solution<br/>for the inverse kinematics of our two-link</p>
+<p>robot when it is in this particular configuration,<br/>where Q2 is negative.</p>
+<p>Let’s compare the two solutions, the case<br/>where Q2 is positive and the case where Q2</p>
+<p>is negative.</p>
 <p></p>
 <p></p>
 <p style="text-align: center;"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">Inverse kinematics for a 2-joint robot arm using algebra</yt-formatted-string></p>
