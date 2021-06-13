@@ -139,11 +139,9 @@ img.add_border {
 <p style="text-align: center;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/IKOGwoJ2HLk" title="YouTube video player" width="560"></iframe></p>
 <p>We saw this simple two-link robot in the previous lecture about forward kinematics.</p>
 <p></p>
-<p>我們在前面看到了這個簡單的雙連桿機器人關於正向運動學的講座。</p>
-<p>The tooltip pose of this robot is described<br/>simply by two numbers, the coordinates x and</p>
-<p>y with respect to the world coordinate frame.</p>
-<p>描述了該機器人的工具提示位姿<br/>簡單地由兩個數字，坐標 x 和</p>
-<p>y 相對於世界坐標系。</p>
+<p>我們在之前看到了簡單的雙連桿機械手臂關於正向運動學的課程。</p>
+<p>The tooltip pose of this robot is described simply by two numbers, the coordinates x and y with respect to the world coordinate frame.</p>
+<p>描述了這個機器人的工具提示動作簡單地由兩個數字，坐標 x 和y 相對於世界坐標系。</p>
 <p></p>
 <p>So, the problem here is that given x and y,<br/>we want to determine the joined angles, Q1</p>
 <p>and Q2.</p>
@@ -197,128 +195,108 @@ img.add_border {
 <p>It’s pretty straightforward to write down<br/>this particular relationship.</p>
 <p>寫下這種特殊關係非常簡單。</p>
 <p></p>
-<p>We can isolate the term cos alpha which gives<br/>us the angle alpha that we’re interested</p>
-<p>in.</p>
+<p>We can isolate the term cos alpha which gives us the angle alpha that we’re interested in.</p>
+<p>我們可以分離出術語 cos alpha，它給出了我們感興趣的角度 alpha。</p>
+<p></p>
+<p>And, it’s defined in terms of the constant link lengths, A1 and A2 and the position of the end effector, x and y.</p>
+<p>而且，它是根據恆定連桿長度 A1 和 A2 以及末端執行器的位置 x 和 y 定義的。</p>
+<p></p>
+<p>We can write this simple relationship between the angles alpha and Q2.</p>
+<p>我們可以寫出角度 alpha 和 Q2 之間的這種簡單關係。</p>
+<p></p>
+<p>And, we know from the shape of the cosine function that cos of Q2 must be equal to negative of cos alpha.</p>
+<p>而且，我們從餘弦函數的形狀知道，Q2 的 cos 必須等於 cos alpha 的負值。</p>
+<p></p>
+<p>This time, let’s just write an expression for the cosine of the joined angle Q2.</p>
+<p>這一次，讓我們為連接角 Q2 的餘弦寫一個表達式。</p>
+<p></p>
+<p>Now, we’re going to draw yet another red triangle and we’re going apply some simple trigonometry here.</p>
+<p>現在，我們將繪製另一個紅色三角形，並在此處應用一些簡單的三角函數。</p>
+<p></p>
+<p>If we know Q2, then we know this length and this length of the red triangle.</p>
+<p>如果我們知道 Q2，那麼我們就知道這個長度和這個紅色三角形的長度。</p>
+<p></p>
+<p>We can write this relationship for the sine of the joined angle Q2.</p>
+<p>我們可以為連接角 Q2 的正弦寫出這種關係。</p>
+<p></p>
+<p>Now, we can consider this bigger triangle whose angle is beta and this side length of the triangle is given here in blue.</p>
+<p>現在，我們可以考慮這個更大的三角形，它的角是β，三角形的這條邊長在這裡用藍色給出。</p>
+<p></p>
+<p>And, the length of the other side of the triangle is this.</p>
+<p>並且，三角形另一邊的長度是這個。</p>
+<p></p>
+<p>So, now we can write an expression for the angle beta in terms of these parameters here.</p>
+<p>所以，現在我們可以在此處根據這些參數編寫角度 beta 的表達式。</p>
+<p></p>
+<p>Going back to the red triangle that we drew earlier, we can establish a relationship between Q1 and the angle beta.</p>
+<p>回到我們之前畫的紅色三角形，我們可以建立Q1和角度β之間的關係。</p>
+<p></p>
+<p>Introduce yet another angle, this one gamma and we can write a relationship between the angle gamma and the tooltip coordinates x and y.</p>
+<p>引入另一個角度，這個伽馬，我們可以寫出角度伽馬和工具提示坐標 x 和 y 之間的關係。</p>
+<p></p>
+<p>Now, we can write a simple relationship between the angles that we’ve constructed, gamma and beta and the joined angle we’re interested<br/>in which is Q1.</p>
+<p>現在，我們可以在我們構建的角度、gamma 和 beta 以及我們感興趣的連接角度之間寫出一個簡單的關係其中是 Q1。</p>
 <p></p>
 <p></p>
-<p>And, it’s defined in terms of the constant<br/>link lengths, A1 and A2 and the position of</p>
-<p>the end effector, x and y.</p>
+<p>And, the total relationship looks something like this.</p>
+<p>而且，整個關係看起來像這樣。</p>
 <p></p>
+<p>Quite a complex relationship, it gives us the angle of joined one, that’s Q1 in terms of the end effector coordinates y and x, and a bunch of constants, a1 and a2, and it’s also a function of the second joint angle, Q2.</p>
+<p>相當複雜的關係，它為我們提供了連接的角度，即末端執行器坐標 y 和 x 的 Q1，以及一系列常量 a1 和 a2，它也是第二個關節角度 Q2 的函數。</p>
 <p></p>
-<p>We can write this simple relationship between<br/>the angles alpha and Q2.</p>
+<p>So, let’s summarize what it is that we have derived here.</p>
+<p>所以，讓我們總結一下我們在這裡得出的結論。</p>
 <p></p>
+<p>We have an expression for the cosine of Q2 and we have an expression for Q1.</p>
+<p>我們有 Q2 的餘弦表達式和 Q1 的表達式。</p>
 <p></p>
-<p>And, we know from the shape of the cosine<br/>function that cos of Q2 must be equal to negative</p>
-<p>of cos alpha.</p>
+<p>Now, the cosine function is symmetrical about 0.</p>
+<p>現在，餘弦函數關於 0 對稱。</p>
 <p></p>
+<p>So, if we know the value of the cosine of Q2, then there are two possible solutions, a positive angle and a negative angle.</p>
+<p>所以，如果我們知道 Q2 的餘弦值，那麼有兩種可能的解，一個正角和一個負角。</p>
 <p></p>
-<p>This time, let’s just write an expression<br/>for the cosine of the joined angle Q2.</p>
+<p>We’re going to explicitly choose the positive angle, which means that I can write this expression here.</p>
+<p>我們將明確選擇正角，這意味著我可以在這裡寫這個表達式。</p>
 <p></p>
+<p>And now, we have what we call the inverse kinematic solution for this two-link robot.</p>
+<p>現在，我們有了這個雙連桿機器人的逆運動學解決方案。</p>
 <p></p>
-<p>Now, we’re going to draw yet another red<br/>triangle and we’re going apply some simple</p>
-<p>trigonometry here.</p>
+<p>We have an expression for the two joined angles, Q1 and Q2 in terms of the end effector pose x and y, and a bunch of constants.</p>
+<p>我們有兩個連接角 Q1 和 Q2 的表達式，根據末端執行器姿勢 x 和 y 以及一系列常數。</p>
 <p></p>
+<p>You notice that the two equations are not independent.</p>
+<p>你注意到這兩個方程不是獨立的。</p>
 <p></p>
-<p>If we know Q2, then we know this length and<br/>this length of the red triangle.</p>
+<p>The equation for Q1, in fact, depends on the solution for Q2.</p>
+<p>事實上，Q1 的方程取決於 Q2 的解。</p>
 <p></p>
+<p>In this case, Q2 is negative and we’re going to write the solution for Q2 with a negative sign in front of the inverse cosine.</p>
+<p>在這種情況下，Q2 是負數，我們將在反餘弦前用負號編寫 Q2 的解。</p>
 <p></p>
-<p>We can write this relationship for the sine<br/>of the joined angle Q2.</p>
+<p>Now, we need to solve for Q1, so we’re going to introduce this particular red triangle,</p>
+<p>現在，我們需要求解 Q1，所以我們將介紹這個特殊的紅色三角形，</p>
 <p></p>
+<p>the angle beta that we solved previously, and the angle gamma which is defined in terms of y and x.</p>
+<p>我們之前求解的角度 beta，以及根據 y 和 x 定義的角度 gamma。</p>
 <p></p>
-<p>Now, we can consider this bigger triangle<br/>whose angle is beta and this side length of</p>
-<p>the triangle is given here in blue.</p>
-<p></p>
-<p></p>
-<p>And, the length of the other side of the triangle<br/>is this.</p>
-<p></p>
-<p></p>
-<p>So, now we can write an expression for the<br/>angle beta in terms of these parameters here.</p>
-<p></p>
-<p></p>
-<p>Going back to the red triangle that we drew<br/>earlier, we can establish a relationship between</p>
-<p>Q1 and the angle beta.</p>
-<p></p>
-<p></p>
-<p>Introduce yet another angle, this one gamma<br/>and we can write a relationship between the</p>
-<p>angle gamma and the tooltip coordinates x<br/>and y.</p>
-<p></p>
-<p></p>
-<p>Now, we can write a simple relationship between<br/>the angles that we’ve constructed, gamma</p>
-<p>and beta and the joined angle we’re interested<br/>in which is Q1.</p>
-<p></p>
-<p></p>
-<p>And, the total relationship looks something<br/>like this.</p>
-<p></p>
-<p></p>
-<p>Quite a complex relationship, it gives us<br/>the angle of joined one, that’s Q1 in terms</p>
-<p>of the end effector coordinates y and x, and<br/>a bunch of constants, a1 and a2, and it’s</p>
-<p>also a function of the second joint angle,<br/>Q2.</p>
-<p></p>
-<p></p>
-<p>So, let’s summarize what it is that we have<br/>derived here.</p>
-<p></p>
-<p></p>
-<p>We have an expression for the cosine of Q2<br/>and we have an expression for Q1.</p>
-<p></p>
-<p></p>
-<p>Now, the cosine function is symmetrical about<br/>0.</p>
-<p></p>
-<p></p>
-<p>So, if we know the value of the cosine of<br/>Q2, then there are two possible solutions,</p>
-<p>a positive angle and a negative angle.</p>
-<p></p>
-<p></p>
-<p>We’re going to explicitly choose the positive<br/>angle, which means that I can write this expression</p>
-<p>here.</p>
-<p></p>
-<p></p>
-<p>And now, we have what we call the inverse<br/>kinematic solution for this two-link robot.</p>
-<p></p>
-<p></p>
-<p>We have an expression for the two joined angles,<br/>Q1 and Q2 in terms of the end effector pose</p>
-<p>x and y, and a bunch of constants.</p>
-<p></p>
-<p></p>
-<p>You notice that the two equations are not<br/>independent.</p>
-<p></p>
-<p></p>
-<p>The equation for Q1, in fact, depends on the<br/>solution for Q2.</p>
-<p></p>
-<p></p>
-<p>In this case, Q2 is negative and we’re going<br/>to write the solution for Q2 with a negative</p>
-<p>sign in front of the inverse cosine.</p>
-<p></p>
-<p></p>
-<p>Now, we need to solve for Q1, so we’re going<br/>to introduce this particular red triangle,</p>
-<p></p>
-<p></p>
-<p>the angle beta that we solved previously,</p>
-<p>and the angle gamma which is defined in terms</p>
-<p>of y and x.</p>
-<p></p>
-<p></p>
-<p>Now, we write a slightly different relationship<br/>between Q1, gamma and beta, different to what</p>
-<p>we had before.</p>
-<p></p>
+<p>Now, we write a slightly different relationship between Q1, gamma and beta, different to what we had before.</p>
+<p>現在，我們在 Q1、gamma 和 beta 之間寫出略有不同的關係，與我們之前的關係不同。</p>
 <p></p>
 <p>There’s a change of sign involved.</p>
+<p>涉及到符號的變化。</p>
 <p></p>
+<p>Then, we can substitute all that previous equation and come up with this expression for Q1.</p>
+<p>然後，我們可以替換之前的所有等式並得出 Q1 的這個表達式。</p>
 <p></p>
-<p>Then, we can substitute all that previous<br/>equation and come up with this expression</p>
-<p>for Q1.</p>
+<p>Again, there is a change of sign here. Previously, this was a negative sign.</p>
+<p>同樣，這裡的符號發生了變化。 以前，這是一個負面信號。</p>
 <p></p>
+<p>And, here in summary form is the solution for the inverse kinematics of our two-link robot when it is in this particular configuration, where Q2 is negative.</p>
+<p>並且，這裡總結性地給出了我們的雙連桿機器人在這種特定配置下的逆向運動學的解決方案，其中 Q2 為負。</p>
 <p></p>
-<p>Again, there is a change of sign here.</p>
-<p>Previously, this was a negative sign.</p>
-<p></p>
-<p></p>
-<p>And, here in summary form is the solution<br/>for the inverse kinematics of our two-link</p>
-<p>robot when it is in this particular configuration,<br/>where Q2 is negative.</p>
-<p></p>
-<p></p>
-<p>Let’s compare the two solutions, the case<br/>where Q2 is positive and the case where Q2</p>
-<p>is negative.</p>
-<p></p>
+<p>Let’s compare the two solutions, the case where Q2 is positive and the case where Q2 is negative.</p>
+<p>讓我們比較兩種解決方案，Q2 為正的情況和 Q2 為負的情況。</p>
 <p></p>
 <p style="text-align: center;"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">Inverse kinematics for a 2-joint robot arm using algebra</yt-formatted-string></p>
 <p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/eIZuz1XCd0w" title="YouTube video player" width="560"></iframe></p>
