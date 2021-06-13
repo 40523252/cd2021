@@ -223,87 +223,185 @@ for i in range(len(data)):  # 將範圍(range)訂在data讀到的len(有6個)裡
 <p style="text-align: center;"><strong>Inverse kinematics  翻譯</strong></p>
 <p style="text-align: center;"><yt-formatted-string class="style-scope ytd-video-primary-info-renderer" force-default-style="">Inverse kinematics for a 2-joint robot arm using geometry</yt-formatted-string></p>
 <p style="text-align: center;"><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="allowfullscreen" frameborder="0" height="315" src="https://www.youtube.com/embed/IKOGwoJ2HLk" title="YouTube video player" width="560"></iframe></p>
-<p>We saw this simple two-link robot in the previous<br/>lecture about forward kinematics.</p>
+<p>We saw this simple two-link robot in the previous lecture about forward kinematics.</p>
+<p></p>
+<p>我們在前面看到了這個簡單的雙連桿機器人關於正向運動學的講座。</p>
 <p>The tooltip pose of this robot is described<br/>simply by two numbers, the coordinates x and</p>
 <p>y with respect to the world coordinate frame.</p>
+<p>描述了該機器人的工具提示位姿<br/>簡單地由兩個數字，坐標 x 和</p>
+<p>y 相對於世界坐標系。</p>
+<p></p>
 <p>So, the problem here is that given x and y,<br/>we want to determine the joined angles, Q1</p>
 <p>and Q2.</p>
+<p>所以，這裡的問題是，給定 x 和 y，<br/>我們要確定連接的角度 Q1</p>
+<p>和 Q2。</p>
+<p></p>
 <p>The solution that we’re going to follow<br/>in this particular section is a geometric</p>
 <p>one.</p>
-<p>We’re going to start with a simple piece<br/>of construction.</p>
+<p>我們將在本節中遵循的解決方案是幾何解決方案。</p>
+<p></p>
+<p>We’re going to start with a simple piece of construction.</p>
+<p>我們將從一個簡單的結構開始。</p>
+<p></p>
 <p>We’re going to overlay the red triangle<br/>on top of our robot.</p>
+<p>我們將在機器人頂部覆蓋紅色三角形。</p>
 <p>We know that the end point coordinate is x,<br/>y, so the vertical height of the triangle</p>
 <p>is y, the horizontal width is x.</p>
+<p>我們知道終點坐標是x，y，所以三角形的垂直高度是y，水平寬度是x。</p>
 <p>And, using Pythagoras theorem, we can write<br/>r squared equals x squared plus y squared.</p>
 <p>So far, so easy.</p>
+<p>並且，使用畢達哥拉斯定理，我們可以寫出 r 平方等於 x 平方加上 y 平方。<br/>到目前為止，很容易。</p>
 <p>Now, we’re going to look at this triangle<br/>highlighted here in red and we want to determine</p>
 <p>the angle alpha.</p>
+<p>現在，我們將查看此處以紅色突出顯示的三角形，我們要確定角度 alpha。</p>
 <p>In order to do that, we need to use the cosine<br/>rule.</p>
-<p>And, if you’re a little rusty on the cosine<br/>rule, here is a bit of a refresher.</p>
+<p>為了做到這一點，我們需要使用餘弦規則。</p>
+<p>And, if you’re a little rusty on the cosine rule, here is a bit of a refresher.</p>
+<p>而且，如果你對余弦規則有點生疏，這裡有一點複習。</p>
 <p>We have an arbitrary triangle.</p>
-<p>We don’t have to have any right angles in<br/>it and we’re going to label the length of</p>
-<p>this edge as A and the angle opposite that<br/>edge, we’re going to label as little a.</p>
-<p>And, we do the same for this edge and this<br/>angle, and this edge and this angle.</p>
+<p>我們有一個任意三角形。</p>
+<p>We don’t have to have any right angles in it and we’re going to label the length of this edge as A and the angle opposite that edge, we’re going to label as little a.</p>
+<p>我們不必在其中有任何直角，我們將這條邊的長度標記為 A，而與該邊相對的角度，我們將標記為小 a。</p>
+<p></p>
+<p>And, we do the same for this edge and this angle, and this edge and this angle.</p>
+<p>並且，我們對這條邊和這個角，以及這條邊和這個角做同樣的事情。</p>
+<p></p>
 <p>So, all together, the sides are labelled capitals<br/>A, B and C, and the angles are labelled little</p>
 <p>a, little b, and little c.</p>
-<p>So, the cosine rule is simply this relationship<br/>here.</p>
-<p>It’s a bit like Pythagoras’ theorem except<br/>for this extra term on the end with the cos</p>
-<p>a in it.</p>
+<p>因此，所有邊都標記為大寫字母 A、B 和 C，角標記為小 a、小 b 和小 c。</p>
+<p></p>
+<p>So, the cosine rule is simply this relationship here.</p>
+<p>所以，餘弦規則就是這裡的這種關係。</p>
+<p></p>
+<p>It’s a bit like Pythagoras’ theorem except for this extra term on the end with the cos a in it.</p>
+<p>它有點像畢達哥拉斯的定理，除了末尾有 cos a 的這個額外項。</p>
+<p></p>
 <p>Now, let’s apply the cosine rule to the<br/>particular triangle we looked at a moment</p>
 <p>ago.</p>
+<p>現在，讓我們將餘弦規則應用於我們剛才看到的特定三角形。</p>
+<p></p>
 <p>It’s pretty straightforward to write down<br/>this particular relationship.</p>
+<p>寫下這種特殊關係非常簡單。</p>
+<p></p>
 <p>We can isolate the term cos alpha which gives<br/>us the angle alpha that we’re interested</p>
 <p>in.</p>
+<p></p>
+<p></p>
 <p>And, it’s defined in terms of the constant<br/>link lengths, A1 and A2 and the position of</p>
 <p>the end effector, x and y.</p>
+<p></p>
+<p></p>
 <p>We can write this simple relationship between<br/>the angles alpha and Q2.</p>
+<p></p>
+<p></p>
 <p>And, we know from the shape of the cosine<br/>function that cos of Q2 must be equal to negative</p>
 <p>of cos alpha.</p>
+<p></p>
+<p></p>
 <p>This time, let’s just write an expression<br/>for the cosine of the joined angle Q2.</p>
+<p></p>
+<p></p>
 <p>Now, we’re going to draw yet another red<br/>triangle and we’re going apply some simple</p>
 <p>trigonometry here.</p>
+<p></p>
+<p></p>
 <p>If we know Q2, then we know this length and<br/>this length of the red triangle.</p>
+<p></p>
+<p></p>
 <p>We can write this relationship for the sine<br/>of the joined angle Q2.</p>
+<p></p>
+<p></p>
 <p>Now, we can consider this bigger triangle<br/>whose angle is beta and this side length of</p>
 <p>the triangle is given here in blue.</p>
+<p></p>
+<p></p>
 <p>And, the length of the other side of the triangle<br/>is this.</p>
+<p></p>
+<p></p>
 <p>So, now we can write an expression for the<br/>angle beta in terms of these parameters here.</p>
+<p></p>
+<p></p>
 <p>Going back to the red triangle that we drew<br/>earlier, we can establish a relationship between</p>
 <p>Q1 and the angle beta.</p>
+<p></p>
+<p></p>
 <p>Introduce yet another angle, this one gamma<br/>and we can write a relationship between the</p>
 <p>angle gamma and the tooltip coordinates x<br/>and y.</p>
+<p></p>
+<p></p>
 <p>Now, we can write a simple relationship between<br/>the angles that we’ve constructed, gamma</p>
 <p>and beta and the joined angle we’re interested<br/>in which is Q1.</p>
+<p></p>
+<p></p>
 <p>And, the total relationship looks something<br/>like this.</p>
+<p></p>
+<p></p>
 <p>Quite a complex relationship, it gives us<br/>the angle of joined one, that’s Q1 in terms</p>
 <p>of the end effector coordinates y and x, and<br/>a bunch of constants, a1 and a2, and it’s</p>
 <p>also a function of the second joint angle,<br/>Q2.</p>
+<p></p>
+<p></p>
 <p>So, let’s summarize what it is that we have<br/>derived here.</p>
+<p></p>
+<p></p>
 <p>We have an expression for the cosine of Q2<br/>and we have an expression for Q1.</p>
+<p></p>
+<p></p>
 <p>Now, the cosine function is symmetrical about<br/>0.</p>
+<p></p>
+<p></p>
 <p>So, if we know the value of the cosine of<br/>Q2, then there are two possible solutions,</p>
 <p>a positive angle and a negative angle.</p>
+<p></p>
+<p></p>
 <p>We’re going to explicitly choose the positive<br/>angle, which means that I can write this expression</p>
 <p>here.</p>
+<p></p>
+<p></p>
 <p>And now, we have what we call the inverse<br/>kinematic solution for this two-link robot.</p>
+<p></p>
+<p></p>
 <p>We have an expression for the two joined angles,<br/>Q1 and Q2 in terms of the end effector pose</p>
 <p>x and y, and a bunch of constants.</p>
+<p></p>
+<p></p>
 <p>You notice that the two equations are not<br/>independent.</p>
+<p></p>
+<p></p>
 <p>The equation for Q1, in fact, depends on the<br/>solution for Q2.</p>
+<p></p>
+<p></p>
 <p>In this case, Q2 is negative and we’re going<br/>to write the solution for Q2 with a negative</p>
 <p>sign in front of the inverse cosine.</p>
+<p></p>
+<p></p>
 <p>Now, we need to solve for Q1, so we’re going<br/>to introduce this particular red triangle,</p>
-<p>the angle beta that we solved previously,<br/>and the angle gamma which is defined in terms</p>
+<p></p>
+<p></p>
+<p>the angle beta that we solved previously,</p>
+<p>and the angle gamma which is defined in terms</p>
 <p>of y and x.</p>
+<p></p>
+<p></p>
 <p>Now, we write a slightly different relationship<br/>between Q1, gamma and beta, different to what</p>
 <p>we had before.</p>
+<p></p>
+<p></p>
 <p>There’s a change of sign involved.</p>
+<p></p>
+<p></p>
 <p>Then, we can substitute all that previous<br/>equation and come up with this expression</p>
 <p>for Q1.</p>
+<p></p>
+<p></p>
 <p>Again, there is a change of sign here.</p>
 <p>Previously, this was a negative sign.</p>
+<p></p>
+<p></p>
 <p>And, here in summary form is the solution<br/>for the inverse kinematics of our two-link</p>
 <p>robot when it is in this particular configuration,<br/>where Q2 is negative.</p>
+<p></p>
+<p></p>
 <p>Let’s compare the two solutions, the case<br/>where Q2 is positive and the case where Q2</p>
 <p>is negative.</p>
 <p></p>
